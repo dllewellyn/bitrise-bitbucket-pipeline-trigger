@@ -91,3 +91,10 @@ inputs:
 
         https://bitbucket.org/<workspace>/<slug>
       is_required: true
+  - pipeline_to_trigger:
+    opts:
+      title: "Name of the bitbucket pipeline step to trigger"
+      summary: Bitbucket step
+      description: |
+        Name of the bitbucket pipeline step to trigger
+      is_required: true
