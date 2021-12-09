@@ -27,6 +27,7 @@ workflows:
         - bitbucket_workspace: dllewellyn
         - bitbucket_slug: safetorun-admin
         - pipeline_to_trigger: test_deploy
+        - branch: master
   share-this-step:
     envs:
     - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
