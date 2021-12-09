@@ -19,7 +19,7 @@ support_url: https://bitbucket.org/xdesign365/bitrise-trigger-bitbucket-piepline
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
-  
+
 type_tags:
   - deploy
 
@@ -43,14 +43,34 @@ toolkit:
 
 
 inputs:
-  - example_step_input: Default Value - you can leave this empty if you want to
+  - bitbucket_username: 
     opts:
-      title: "Example Step Input"
-      summary: Summary. No more than 2-3 sentences.
+      title: "Bitbucket username"
+      summary: Your bitbucket username (note username not email)
       description: |
-        Description of this input.
+        Your bitbucket username
+      is_expand: true
+      is_required: true
+      value_options: []
+  - bitbucket_app_password: 
+    opts:
+      title: "Bitbucket app password (please don't use your bitbucket password)"
+      summary: Create an app password from bitbucket 
+      description: |
+        Create a bitbucket app password
 
-        Can be Markdown formatted text.
+        https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/
+      is_expand: true
+      is_required: true
+      value_options: []
+  - branch: $BITRISE_GIT_BRANCH
+    opts:
+      title: "Bitbucket app password (please don't use your bitbucket password)"
+      summary: Create an app password from bitbucket 
+      description: |
+        Create a bitbucket app password
+
+        https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/
       is_expand: true
       is_required: true
       value_options: []
