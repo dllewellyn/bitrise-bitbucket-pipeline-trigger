@@ -50,19 +50,18 @@ inputs:
       description: |
         Your bitbucket username
       is_expand: true
-      is_required: true
-      value_options: []
+
   - bitbucket_app_password: 
     opts:
       title: "Bitbucket app password (please don't use your bitbucket password)"
       summary: Create an app password from bitbucket 
+      is_sensitive: true
       description: |
         Create a bitbucket app password
 
         https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/
-      is_expand: true
       is_required: true
-      value_options: []
+
   - branch: $BITRISE_GIT_BRANCH
     opts:
       title: "Bitbucket app password (please don't use your bitbucket password)"
@@ -71,9 +70,7 @@ inputs:
         Create a bitbucket app password
 
         https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/
-      is_expand: true
       is_required: true
-      value_options: []
 
 outputs:
   - EXAMPLE_STEP_OUTPUT:
