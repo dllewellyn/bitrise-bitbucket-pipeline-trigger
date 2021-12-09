@@ -22,10 +22,11 @@ workflows:
     - 'git::https://github.com/dllewellyn/bitrise-bitbucket-pipeline-trigger.git@main':
         title: My step
         inputs:
-        - my_input_1: my value 1
         - bitbucket_username: dllewellyn
         - bitbucket_app_password: $BITBUCKET_PASSWORD
-        - my_input_2: my value 2
+        - bitbucket_workspace: dllewellyn
+        - bitbucket_slug: safetorun-admin
+        - pipeline_to_trigger: 
   share-this-step:
     envs:
     - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL

@@ -50,7 +50,7 @@ inputs:
       description: |
         Your bitbucket username
       is_expand: true
-
+      is_required: true
   - bitbucket_app_password: 
     opts:
       title: "Bitbucket app password (please don't use your bitbucket password)"
@@ -72,12 +72,22 @@ inputs:
         https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/
       is_required: true
 
-outputs:
-  - EXAMPLE_STEP_OUTPUT:
+  - bitbucket_workspace:
     opts:
-      title: "Example Step Output"
-      summary: Summary. No more than 2-3 sentences.
+      title: "Bitbucket workspace"
+      summary: Bitbucket workspace
       description: |
-        Description of this output.
+        For example:
 
-        Can be Markdown formatted text.
+        https://bitbucket.org/<workspace>/<slug>
+      is_required: true
+
+  - bitbucket_slug:
+    opts:
+      title: "Bitbucket slug"
+      summary: Bitbucket slug
+      description: |
+        For example:
+
+        https://bitbucket.org/<workspace>/<slug>
+      is_required: true
