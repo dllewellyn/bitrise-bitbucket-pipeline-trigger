@@ -14,11 +14,11 @@ app:
 workflows:
   run_step:
     steps:
-    - git::https://github.com/dllewellyn/bitrise-bitbucket-pipeline-trigger.git@main:
-      title: My step
-      inputs:
-       - my_input_1: "my value 1"
-       - my_input_2: "my value 2"
+      - git::https://github.com/dllewellyn/bitrise-bitbucket-pipeline-trigger.git@main:
+          title: My step
+          inputs:
+           - my_input_1: "my value 1"
+           - my_input_2: "my value 2"
   test:
     steps:
     - script:
